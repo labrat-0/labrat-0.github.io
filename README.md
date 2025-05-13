@@ -12,7 +12,7 @@ Built with HTML, CSS, and vanilla JavaScript.
 
 ## Features
 
-- Minimalist, typography-focused design inspired by [nexxel.dev](https://www.nexxel.dev/)
+
 - Clean section organization with subtle animations
 - Project showcase with simple hover effects
 - Professional experience timeline
