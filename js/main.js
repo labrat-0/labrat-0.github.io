@@ -52,7 +52,7 @@ async function loadBlogLinks() {
             blogEntry.innerHTML = `
                 <div class="blog-date">${formattedDate}</div>
                 <h3 class="blog-title">
-                    <a href="/blog/${post.filename}" target="_blank" class="blog-link">${post.title}</a>
+                    <a href="/blog/reader.html?post=${post.filename}" class="blog-link">${post.title}</a>
                 </h3>
                 <p class="blog-content">${post.description}</p>
             `;
