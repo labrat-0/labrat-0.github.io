@@ -79,4 +79,4 @@ The site uses a minimal color palette:
 ## Credits
 
 - Font: [Inter](https://fonts.google.com/specimen/Inter) from Google Fonts
-- Design inspiration: [nexxel.dev](https://www.nexxel.dev/)
+
