@@ -15,12 +15,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize learning progress bars
     initLearningProgress();
     
-    // Initialize blog entries
-    initBlogEntries();
+    // Load blog post links
+    loadBlogLinks();
     
     // Initialize tools radar
     initToolsRadar();
 });
+
+/**
+ * Load blog post links from the index.json file
+ */
+async function loadBlogLinks() {
+    const blogContainer = document.getElementById('blog-container');
+    if (!blogContainer) return;
+    
+    try {
+        // Fetch the list of blog posts from index.json
+        const response = await fetch('/blog/index.json');
+        const blogPosts = await response.json();
+        
+        // Clear loading message
+        blogContainer.innerHTML = '';
+        
+        // Sort posts by date (newest first)
+        blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        // Display the posts
+        for (const post of blogPosts) {
+            const blogEntry = document.createElement('div');
+            blogEntry.className = 'blog-entry';
+            
+            // Format date
+            const date = new Date(post.date);
+            const formattedDate = date.toISOString().split('T')[0];
+            
+            blogEntry.innerHTML = `
+                <div class="blog-date">${formattedDate}</div>
+                <h3 class="blog-title">
+                    <a href="/blog/${post.filename}" target="_blank" class="blog-link">${post.title}</a>
+                </h3>
+                <p class="blog-content">${post.description}</p>
+            `;
+            
+            blogContainer.appendChild(blogEntry);
+        }
+        
+        // Initialize blog entries animations
+        initBlogEntries();
+        
+    } catch (error) {
+        console.error('Error loading blog posts:', error);
+        blogContainer.innerHTML = '<p>Failed to load blog posts. Please try again later.</p>';
+    }
+}
 
 /**
  * Add subtle hover interactions to elements

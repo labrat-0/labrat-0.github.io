@@ -131,29 +131,9 @@
                 </div>
 
                 <h2 class="section-title">daily_thoughts</h2>
-                <div class="term-command">user@system:~$ cat ~/blog/recent.md</div>
-                <div class="blog-container">
-                    <div class="blog-entry">
-                        <div class="blog-date">2025-02-15</div>
-                        <h3 class="blog-title">Embracing Hypermedia-driven Applications</h3>
-                        <p class="blog-content">
-                            After working with HTMX for a few weeks, I'm impressed how it simplifies building interactive UIs. The mental model of exchanging HTML instead of JSON feels refreshingly straightforward. Simple example: <code>hx-get="/data" hx-trigger="click" hx-swap="outerHTML"</code>
-                        </p>
-                    </div>
-                    <div class="blog-entry">
-                        <div class="blog-date">2025-02-10</div>
-                        <h3 class="blog-title">Python Data Structures Workshop</h3>
-                        <p class="blog-content">
-                            Gave a workshop on advanced Python data structures today. The most interesting discussion was about when to use different collection types. Quick reference: <code>dict</code> for fast lookups, <code>set</code> for uniqueness checks, <code>deque</code> for efficient queue operations.
-                        </p>
-                    </div>
-                    <div class="blog-entry">
-                        <div class="blog-date">2025-02-05</div>
-                        <h3 class="blog-title">Optimizing KQL Queries</h3>
-                        <p class="blog-content">
-                            Found a way to optimize our log analysis pipelines by using KQL's summarize operator more effectively. Reduced query time from 45s to 12s by restructuring: <code>| summarize count() by bin(timestamp, 1h), level</code>
-                        </p>
-                    </div>
+                <div class="term-command">user@system:~$ ls -la ~/blog/*.md</div>
+                <div id="blog-container" class="blog-container">
+                    <div class="blog-loading">Loading blog posts...</div>
                 </div>
 
                 <h2 class="section-title">tools_radar</h2>
