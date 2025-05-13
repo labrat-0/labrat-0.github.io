@@ -522,7 +522,7496 @@ body {
 
 .term-prompt {
     color: #5a5a5a;
-} / *   D a i l y   T h o u g h t s / B l o g   S e c t i o n   * /  
- . b l o g - c o n t a i n e r   {   d i s p l a y :   f l e x ;   f l e x - d i r e c t i o n :   c o l u m n ;   g a p :   1 0 p x ;   m a r g i n - t o p :   6 p x ;   }  
- / *   B l o g   a n d   R a d a r   S t y l e s   * /  
- 
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a:hover {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    color: #444;
+}
+
+/* Command line cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 0.8rem;
+    background: #666;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .two-column-section {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.term-prompt, .term-command {
+    color: #666;
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.term-command {
+    color: #555;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: 8px;
+}
+
+.term-command::before {
+    content: '$';
+    margin-right: 3px;
+    color: #444;
+}
+
+.term-prompt {
+    color: #5a5a5a;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    margin: 30px 0 20px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.quick-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-left: 2px solid #444;
+    transition: all 0.2s ease;
+    width: calc(50% - 15px);
+}
+
+.quick-link-item:hover {
+    background: #1e1e1e;
+    border-left-color: #666;
+}
+
+.quick-link-icon {
+    font-size: 1.1rem;
+    min-width: 1.1rem;
+    text-align: center;
+}
+
+.quick-link-content {
+    flex-grow: 1;
+}
+
+.quick-link-name {
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    font-weight: 500;
+}
+
+.quick-link-name a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.quick-link-name a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.quick-link-description {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .quick-link-item {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.7rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer a
