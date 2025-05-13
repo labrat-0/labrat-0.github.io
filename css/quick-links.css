@@ -6,10 +6,16 @@
 }
 
 .quick-links-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin-top: 10px;
+}
+
+.quick-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .quick-link-item {
@@ -20,7 +26,6 @@
     padding: 10px 12px;
     border-left: 2px solid #444;
     transition: all 0.2s ease;
-    width: calc(50% - 15px);
 }
 
 .quick-link-item:hover {
@@ -63,7 +68,7 @@
 }
 
 @media (max-width: 768px) {
-    .quick-link-item {
-        width: 100%;
+    .quick-links-container {
+        grid-template-columns: 1fr;
     }
 } 
