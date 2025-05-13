@@ -69,7 +69,7 @@ These parameterized queries make it easier to build drill-down dashboards that b
 
 For anyone wanting to level up their KQL skills, these resources have been invaluable:
 
-- [DevBytes app](https://devbytes.app) - Great for quick KQL tips
+- [DevBytes app](https://devbytes.co.in/) - Great for quick KQL tips
 - [dev.to](https://dev.to) - Several excellent tutorials on advanced KQL techniques
 - [Azure Data Explorer documentation](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/) - The definitive reference
 

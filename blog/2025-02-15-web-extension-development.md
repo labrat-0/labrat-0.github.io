@@ -54,7 +54,7 @@ These cards provide a consistent UI across platforms with minimal effort. The wa
 
 For anyone interested in extension development, I've found these resources invaluable:
 
-- [DevBytes app](https://devbytes.app) - Great bite-sized development tips and tricks
+- [DevBytes app](https://devbytes.co.in/) - Great bite-sized development tips and tricks
 - [dev.to](https://dev.to) - The community articles on extension development are outstanding
 - [Extension Workshop by Mozilla](https://extensionworkshop.com/) - Even though I'm targeting Chrome/Edge, their conceptual guides are excellent
 
