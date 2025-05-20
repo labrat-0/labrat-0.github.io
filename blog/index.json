@@ -1,5 +1,11 @@
 [
   {
+    "title": "Arch Linux and Ricing",
+    "date": "2025-05-09",
+    "description": "My Journey to finding the best way to work and move in a workspace using the right tools...Arch riced btw..",
+    "filename": "2025-05-09-arch-linux-ricing.md"
+  },
+  {
     "title": "Web Extension Development for Chrome and Edge",
     "date": "2025-02-15",
     "description": "Lessons learned from building browser extensions for the Chrome and Edge stores, including Adaptive Cards implementation and cross-browser compatibility.",
