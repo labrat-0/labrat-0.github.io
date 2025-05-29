@@ -1,8 +1,8 @@
 # Advanced KQL for Real-time Analytics Dashboards
 
-Over the past month, I've been diving deeper into Kusto Query Language (KQL) to build more sophisticated analytics dashboards. The performance improvements have been substantial, especially when working with large datasets in Azure Log Analytics.
+I've been diving deeper into Kusto Query Language (KQL) to learn more about building analytics dashboards. The performance improvements have been great, especially when working with large datasets in Azure Log Analytics.
 
-## Time Series Analysis Techniques
+## Time Series Analysis Techniques via KQL docs
 
 One of the most powerful patterns I've discovered is using the `make-series` operator for time series analysis:
 
@@ -45,7 +45,7 @@ AppRequests
 ) on OperationId
 ```
 
-The `lookup` operator is substantially faster than `join` for many analytics scenarios, especially when one side of the join has relatively few distinct key values.
+The `lookup` operator is much faster than `join` for many analytics scenarios, especially when one side of the join has relatively few distinct key values.
 
 ## Building Dynamic Dashboards
 
@@ -73,4 +73,3 @@ For anyone wanting to level up their KQL skills, these resources have been inval
 - [dev.to](https://dev.to) - Several excellent tutorials on advanced KQL techniques
 - [Azure Data Explorer documentation](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/) - The definitive reference
 
-I'm creating a GitHub repository with my collection of KQL snippets and best practices, which should be available next week as part of the QRNest analytics module. 
