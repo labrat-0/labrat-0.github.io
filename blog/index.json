@@ -16,11 +16,5 @@
     "date": "2025-02-10",
     "description": "How I'm using the Zettelkasten method in Obsidian to improve my RatVault knowledge management system with custom templates and workflows.",
     "filename": "2025-02-10-knowledge-management-with-zettelkasten.md"
-  },
-  {
-    "title": "Advanced KQL for Real-time Analytics Dashboards",
-    "date": "2025-02-05",
-    "description": "Techniques for optimizing Kusto Query Language (KQL) queries to build performant real-time analytics dashboards with time series analysis.",
-    "filename": "2025-02-05-advanced-kql-for-analytics.md"
   }
 ] 
