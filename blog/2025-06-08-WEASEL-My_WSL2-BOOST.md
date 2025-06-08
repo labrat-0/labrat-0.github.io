@@ -3,10 +3,6 @@
 
 *By LabRat Mick 🐀*
 
-![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/images/logo.png)
-![Windows 11](https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg)
-![Linux Penguin](https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png)
-
 ---
 
 ## Why I Built This
