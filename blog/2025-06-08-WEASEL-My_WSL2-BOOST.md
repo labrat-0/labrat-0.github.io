@@ -1,10 +1,8 @@
 
-
+**WEASEL**
 *By LabRat Mick 🐀*
 
 ---
-
-## Why I Built This
 
 Most Windows users prefer clicking through GUIs to view and edit files. I’m not one of them.
 
