@@ -1,6 +1,4 @@
 
-# 🧪 WEASEL Tools: Supercharging Windows 11 with Linux 🐧 & Neovim
-
 *By LabRat Mick 🐀*
 
 ---
