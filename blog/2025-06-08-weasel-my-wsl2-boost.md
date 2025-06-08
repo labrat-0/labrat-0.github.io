@@ -1,16 +1,10 @@
-
-# WEASEL Baby
-*By LabRat Mick 🐀*
-
----
+# 🧪 WEASEL on Win11
 
 Most Windows users prefer clicking through GUIs to view and edit files. I’m not one of them.
 
 I love the keyboard. I live in the terminal. And I’ve always preferred the control and speed that comes with working inside Linux—especially with tools like `Neovim`, `tmux`, and `fzf`. That’s where the idea behind **WEASEL Tools** was born.
 
 I needed a fast, keyboard-driven environment inside Windows, powered by **WSL2**. Something that felt like home—my Linux setup—but fully operational within Windows 11. And that’s exactly what this toolkit delivers.
-
----
 
 ## What WEASEL Tools Is
 
